@@ -8,13 +8,13 @@ By analyzing pre-bubble trends, fitting an appropriate model, and making forecas
 
 The S&P/Case-Shiller Home Price Index (with January 2000 as baseline) from 1991 to 2002 exhibits a gradually upward trend as well as seasonal fluctuations:
 
-![]({{ site.base_url}}images/index_plot-1.png)<!-- -->
+![]({{ site.base_url}}/images/index_plot-1.png)<!-- -->
 
 In order to make forecasts of pre-bubble trends, the beginning of the housing bubble must be pinned down. There appears to be dramatic change in the rate of increase of housing prices around 1998, which may indicate the beginning of the housing bubble; however, many economic factors contribute to a bubble, and there is likely to be disagreement among economists on a specific start date. I built a [Shiny app](https://ryan-quigley.shinyapps.io/Home-price-forecasts/) specifically for this purpose: let the user choose the start date of the bubble, and the forecasts will be automatically generated.
 
 ### Shiny App
 
-[![Shiny app]({{ site.base_url}}forecast_pre-bubble_trends.png)](https://ryan-quigley.shinyapps.io/Home-price-forecasts/)
+[![Shiny app]({{ site.base_url}}/images/forecast_pre-bubble_trends.png)](https://ryan-quigley.shinyapps.io/Home-price-forecasts/)
 
 Currently the model in the Shiny app is a \(\text{SARIMA}(1,1,0)(0,1,1)_{s=12}\). See the *model summary* tab for the parameter estimates.
 
