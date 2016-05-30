@@ -16,7 +16,7 @@ In order to make forecasts of pre-bubble trends, the beginning of the housing bu
 
 [![Shiny app]({{ site.base_url}}/images/forecast_pre-bubble_trends.png)](https://ryan-quigley.shinyapps.io/Home-price-forecasts/)
 
-Currently the model in the Shiny app is a $\text{SARIMA}(1,1,0)(0,1,1)_{s=12}$. See the *model summary* tab for the parameter estimates.
+Currently the model in the Shiny app is a \\(\text{SARIMA}(1,1,0)(0,1,1)_{s=12}\\). See the *model summary* tab for the parameter estimates.
 
 ### Conclusions
 
