@@ -14,7 +14,7 @@ In order to make forecasts of pre-bubble trends, the beginning of the housing bu
 
 ### Shiny App
 
-[![Shiny app]({{ site.base_url}}/images/forecast_pre-bubble_trends.png)](https://ryan-quigley.shinyapps.io/Home-price-forecasts/)
+[![Shiny app]({{ site.base_url}}/images/forecast_pre-bubble_trends.png)](https://ryan-quigley.shinyapps.io/home-price-forecasts/)
 
 The default model in the Shiny app is a \\(\text{SARIMA}(1,1,0)(0,1,1)_{s=12}\\), but I have provided options for customizing the model yourself: check the "Customize the model" checkbox and see how the results change in the various tabs.
 
