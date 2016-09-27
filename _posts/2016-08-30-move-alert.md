@@ -9,7 +9,7 @@ My current role as Data Science Intern requires me to be at a computer for the m
 
 #### Complete R file
 For the impatient, here is the complete R file:
-```r
+```R  
 #!/Library/Frameworks/R.framework/Versions/3.3/Resources/bin/Rscript
 
 ## Libraries
@@ -54,14 +54,14 @@ The two main functions being used from this package are `slackrSetup()` and `sla
 
 #### Crontab
 `env EDITOR=nano crontab -e`
-```bash
+```bash  
 50  09-18 * * 0-5 /path/to/R/file.R
 ```
 `crontab -l`
 
 #### Final R Stuff
 Add this line to the top of R scripts so they can be run from the command line
-```r
+```R  
 #!/Library/Frameworks/R.framework/Versions/3.3/Resources/bin/Rscript
 ```
 Update permissions of R file: `chmod +x /path/to/R/file.R`
@@ -74,7 +74,7 @@ Update permissions of R file: `chmod +x /path/to/R/file.R`
 
 The following needs to be added to the path variable via .bash_profile. In a terminal window enter the following command to edit .bash_profile: `nano ~/.bash_profile`. In the editor add the following lines to the bottom of .bash_profile:
 
-```
+```bash  
 export PATH='/Library/Frameworks/R.framework/Versions/3.3/Resources/bin:$PATH'
 ```
 Hit ctrl+o to save, and ctrl+x to exit.
