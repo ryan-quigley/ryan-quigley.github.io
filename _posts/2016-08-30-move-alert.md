@@ -23,11 +23,11 @@ library(lubridate)
 
 ## Slackr setup
 slackrSetup(
-	incoming_webhook_url = "https://hooks.slack.com/services/XXXX/XXXX/XXXX")
+    incoming_webhook_url = "https://hooks.slack.com/services/XXXX/XXXX/XXXX")
 
 ## Fitbit code
 cookie <- login(email = "your.email@gmail.com",
-  password = Sys.getenv("FBPW"), rememberMe= TRUE)
+    password = Sys.getenv("FBPW"), rememberMe= TRUE)
 
 d <- ymd_hms(Sys.time(), tz = "America/Los_Angeles")
 h <- hour(d)
@@ -36,9 +36,9 @@ today <- get_intraday_data(cookie, what = "steps", date = as.character(d.short))
 steps <- sum(today[hour(today$time) == h,2])
 
 if (steps < 250) {
-	slackrBot("One does not simply walk into Mordor...but you better start moving!",
-	  channel = "", username = "",
-	  incoming_webhook_url = Sys.getenv("SLACK_INCOMING_URL_PREFIX"))
+    slackrBot("One does not simply walk into Mordor...but you better start moving!",
+	    channel = "", username = "",
+	    incoming_webhook_url = Sys.getenv("SLACK_INCOMING_URL_PREFIX"))
 }
 ```
 
