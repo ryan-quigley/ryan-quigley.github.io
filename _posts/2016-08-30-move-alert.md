@@ -2,7 +2,9 @@
 layout: post
 title: Hacking Together Activity Reminders
 ---
-My current role as Data Science Intern requires me to be at a computer for the majority of my waking hours. I am definitely not complaining: I love programming and diving into data. That being said, I have tendency to get fully absorbed in the projects that I am working on. This often results in a time vortex and many sedentary hours, so it is important that I remember to get up and move on a regular basis. Since I am a dedicated Fitbit wearer, I looked to the Fitbit app for hourly activity reminders. The app allows users to set a range of 5-14 consecutive hours in a day for which Fitbit will track whether or not at least 250 steps were taken. Hourly activity reminders are available for the new Fitbit Alta, but not for the older models such as my device: the Charge HR; however, I would not be deterred. The plan:
+My current role as Data Science Intern requires me to be at a computer for the majority of my waking hours. I am definitely not complaining: I love programming and diving into data. That being said, I have tendency to get fully absorbed in the projects that I am working on. This often results in a time vortex and many sedentary hours, so it is important that I remember to get up and move on a regular basis. Since I am a dedicated Fitbit wearer, I looked to the Fitbit app for hourly activity reminders. The app allows users to set a range of 5-14 consecutive hours in a day for which Fitbit will track whether or not at least 250 steps were taken. Hourly activity reminders are available for the new Fitbit Alta, but not for the older models such as my device: the Charge HR; however, I would not be deterred.
+
+The plan:
 
 1. Use the [fitbitScraper](https://github.com/corynissen/fitbitScraper) R package to get my activity data.
 2. Figure out a way to notify myself if less than 250 steps were taken. Enter [Slackr](https://github.com/hrbrmstr/slackr).
@@ -55,14 +57,14 @@ The two main functions being used from this package are `slackrSetup()` and `sla
 
 
 #### Crontab
-`env EDITOR=nano crontab -e`
+To add an entry to the crontab, first open the crontab file using your editor of choice. Here I am using nano. Enter the following at the command line: `env EDITOR=nano crontab -e`. Add the task to the crontab like so,
 ```bash  
 50  09-18 * * 0-5 /path/to/R/file.R
 ```
-`crontab -l`
+Hit ctrl+o to save, and ctrl+x to exit. To see your scheduled tasks, type `crontab -l` at the command line.
 
 #### Final R Stuff
-Add `#!/Library/Frameworks/R.framework/Versions/3.3/Resources/bin/Rscript` to the top of R scripts so they can be run from the command line Update permissions of R file: `chmod +x /path/to/R/file.R`
+Add the following commented line to the top of the R scripts so they can be run from the command line: `#!/Library/Frameworks/R.framework/Versions/3.3/Resources/bin/Rscript`. Then update permissions of R file: `chmod +x /path/to/R/file.R`
 
 #### Final Result
 ![]({{ site.base_url}}/images/slack_move_alert.png)
