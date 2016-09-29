@@ -58,6 +58,7 @@ The two main functions being used from this package are `slackrSetup()` and `sla
 
 #### Crontab
 To add an entry to the crontab, first open the crontab file using your editor of choice. Here I am using nano. Enter the following at the command line: `env EDITOR=nano crontab -e`. Add the task to the crontab like so,
+
 ```bash  
 50  09-18 * * 0-5 /path/to/R/file.R
 ```
