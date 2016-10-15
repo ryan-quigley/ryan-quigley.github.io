@@ -2,7 +2,9 @@
 layout: post
 title: Hacking Together Activity Reminders
 ---
-My current role as Data Science Intern requires me to be at a computer for the majority of my waking hours. I am definitely not complaining: I love programming and diving into data. That being said, I have tendency to get fully absorbed in the projects that I am working on. This often results in a time vortex and many sedentary hours, so it is important that I remember to get up and move on a regular basis. Since I am a dedicated Fitbit wearer, I looked to the Fitbit app for hourly activity reminders. The app allows users to set a range of 5-14 consecutive hours in a day for which Fitbit will track whether or not at least 250 steps were taken. Hourly activity reminders are available for the new Fitbit Alta, but not for the older models such as my device: the Charge HR; however, I would not be deterred.
+My current role as Data Science Intern requires me to be at a computer for the majority of my waking hours. I am definitely not complaining: I love programming and diving into data. That being said, I have tendency to get fully absorbed in the projects that I am working on. This often results in a time vortex and many sedentary hours, so it is important that I remember to get up and move on a regular basis.
+
+Since I am a dedicated Fitbit wearer, I looked to the Fitbit app for hourly activity reminders. The app allows users to set a range of 5-14 consecutive hours in a day for which Fitbit will track whether or not at least 250 steps were taken. Hourly activity reminders are available for the new Fitbit Alta, but not for the older models such as my device, the Charge HR; however, I would not be deterred.
 
 The plan:
 
@@ -37,8 +39,8 @@ steps <- sum(today[hour(today$time) == h,2])
 
 if (steps < 250) {
     slackrBot("One does not simply walk into Mordor...but you better start moving!",
-	    channel = "", username = "",
-	    incoming_webhook_url = Sys.getenv("SLACK_INCOMING_URL_PREFIX"))
+	      channel = "", username = "",
+	      incoming_webhook_url = Sys.getenv("SLACK_INCOMING_URL_PREFIX"))
 }
 ```
 
